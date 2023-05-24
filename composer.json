@@ -1,0 +1,20 @@
+{
+    "name": "ahmed/ishowcase.test",
+    "autoload": {
+        "psr-4": {
+            "Ahmed\\IshowcaseTest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ahmed Alaa El-Din Hassan",
+            "email": "ph_ahmedalaa@azhar.edu.eg"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
