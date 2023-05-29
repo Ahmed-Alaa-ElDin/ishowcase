@@ -1,14 +1,18 @@
 <?php
 
-use PDO;
-use PDOException;
+// use PDO;
+// use PDOException;
 
 class DB
 {
-    private PDO $pdo;
+    private $pdo;
 
-    public function __construct(private array $config)
+    private $config;
+
+    public function __construct($config)
     {
+        $this->config = $config;
+
         $defaultOptions = [
             PDO::ATTR_EMULATE_PREPARES => false,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC

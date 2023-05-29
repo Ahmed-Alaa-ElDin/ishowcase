@@ -4,24 +4,54 @@ namespace App\Models;
 
 abstract class Product
 {
+    protected $id;
+    protected $pid;
+    protected $type;
+    protected $model_number;
+    protected $model_case;
+    protected $water_resistance;
+    protected $movement;
+    protected $caliber;
+    protected $power_reserve;
+    protected $bracelet;
+    protected $dial;
+    protected $large_title;
+    protected $small_title;
+    protected $description;
+    protected $price;
+
     public function __construct(
-        protected int $id,
-        protected int $pid,
-        protected string $type,
-        protected int $model_number,
-        protected string $model_case,
-        protected string $water_resistance,
-        protected string $movement,
-        protected string $caliber,
-        protected string $power_reserve,
-        protected string $bracelet,
-        protected string $dial,
-        protected string $large_title,
-        protected string $small_title,
-        protected string $description,
-        protected float $price,
+        $id,
+        $pid,
+        $type,
+        $model_number,
+        $model_case,
+        $water_resistance,
+        $movement,
+        $caliber,
+        $power_reserve,
+        $bracelet,
+        $dial,
+        $large_title,
+        $small_title,
+        $description,
+        $price
     ) {
-        # code...
+        $this->id = $id;
+        $this->pid = $pid;
+        $this->type = $type;
+        $this->model_number = $model_number;
+        $this->model_case = $model_case;
+        $this->water_resistance = $water_resistance;
+        $this->movement = $movement;
+        $this->caliber = $caliber;
+        $this->power_reserve = $power_reserve;
+        $this->bracelet = $bracelet;
+        $this->dial = $dial;
+        $this->large_title = $large_title;
+        $this->small_title = $small_title;
+        $this->description = $description;
+        $this->price = $price;
     }
 
     public function getId(): int

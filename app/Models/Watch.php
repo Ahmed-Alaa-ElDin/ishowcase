@@ -14,7 +14,7 @@ class Watch extends Product
         $watchesStat->execute();
 
         $allWatches = [];
-        
+
         if ($watchesStat->RowCount()) {
             $allWatches = array_map(function ($watch) {
                 $watch = new Watch(
@@ -34,7 +34,7 @@ class Watch extends Product
                     $watch['description'],
                     $watch['price'],
                 );
-    
+
                 return $watch;
             }, $watchesStat->fetchAll());
         }
@@ -42,7 +42,7 @@ class Watch extends Product
         return $allWatches;
     }
 
-    public static function find(string $id)
+    public static function find($id)
     {
         $watchStat = App::db()->prepare("SELECT * FROM products WHERE `type` = 'item' AND `id` = ?");
 
@@ -75,11 +75,11 @@ class Watch extends Product
         }
     }
 
-    public static function editLargeTitle(string $id, string $large_title)
+    public static function edit($id, $fieldName, $fieldVal)
     {
-        $watchStat = App::db()->prepare("UPDATE `products` SET `large_title` = ? WHERE `id` = ? AND `type` = 'item'");
+        $watchStat = App::db()->prepare("UPDATE `products` SET $fieldName = ? WHERE `id` = ? AND `type` = 'item'");
 
-        $watchStat->execute([$large_title, $id]);
+        $watchStat->execute([$fieldVal, $id]);
 
         if ($watchStat->rowCount()) {
             return true;

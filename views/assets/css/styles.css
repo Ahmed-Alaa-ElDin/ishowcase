@@ -72,7 +72,6 @@ footer {
 /* Regular Button :: End */
 
 
-
 /* Text Button :: Start */
 .text-button {
     background-color: transparent;
@@ -229,6 +228,37 @@ section.homepage-banner {
 
 /* Homepage Banner :: End */
 
+/* Product Page :: Start */
+.product-specs {
+    padding: 30px 0;
+    margin: 30px;
+    -webkit-box-shadow: 0px 0px 20px -9px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 0px 20px -9px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 0px 20px -9px rgba(0, 0, 0, 0.46);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.product-image img {
+    max-width: 100%;
+}
+
+.form-input {
+    border: 1px solid var(--gray);
+    padding: 5px 5px;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+
+/* Product Page :: End */
+
 /* Mobile styles (up to 767px) */
 @media (max-width: 767px) {
     .button {
@@ -347,7 +377,7 @@ section.homepage-banner {
 
     /* Product Page :: Start */
     .product-specs {
-        margin: 30px 0;
+        /* margin: 30px 0; */
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
@@ -362,16 +392,13 @@ section.homepage-banner {
         margin-bottom: 40px;
     }
 
-    .product-image img {
-        max-width: 100%;
-    }
-
     .product-details {
         padding: 0 5%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         row-gap: 20px;
     }
+
     /* Product Page :: End */
 }
 
@@ -494,7 +521,7 @@ section.homepage-banner {
 
     /* Product Page :: Start */
     .product-specs {
-        margin: 40px 0;
+        /* margin: 40px 0; */
         display: grid;
         grid-auto-flow: row-reverse;
         grid-template-columns: repeat(2, 1fr);
@@ -508,9 +535,7 @@ section.homepage-banner {
         overflow: hidden;
     }
 
-    .product-image img {
-        max-width: 100%;
-    }
+
 
     .product-details {
         padding: 0 10vw;
@@ -518,6 +543,7 @@ section.homepage-banner {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 20px;
     }
+
     /* Product Page :: End */
 
 }

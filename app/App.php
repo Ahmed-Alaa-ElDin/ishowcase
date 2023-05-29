@@ -7,10 +7,17 @@ use DB;
 
 class App
 {
-    private static DB $db;
+    private static $db;
 
-    public function __construct(protected Router $router, protected array $request, protected array $config)
+    protected $router;
+    protected $request;
+
+    public function __construct($router,  $request,  $config = [])
     {
+        $this->router = $router;
+
+        $this->request = $request;
+
         static::$db = new DB($config);
     }
 

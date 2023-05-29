@@ -46,114 +46,120 @@
     <section class="product-specs">
         <!-- Details Part :: Start -->
         <div class="product-details">
-            <!-- large_title -->
+            <input type="hidden" id="id" value="<?= $watch->getId() ?>">
+
+            <!-- large_title & small_title -->
             <div>
-                <div class="section-title">
-                    Large Title
+                <div>
+                    <span data-field="large_title" class="medium-title input-to-text">
+                        <?= $watch->getLargeTitle() ?>
+                    </span>
                 </div>
-                <div class="description  text-center">
-                    <input type="hidden" id="id" value="<?= $watch->getId() ?>">
-                    <input type="text" class="form-control" id="large_title" value="<?= $watch->getLargeTitle() ?>">
-                    <span class="text-danger">Note that the data will be updated on blur</span>
+
+                <div>
+                    <span data-field="small_title" class="small-title input-to-text">
+                        <?= $watch->getSmallTitle() ?>
+                    </span>
                 </div>
             </div>
-            <!-- small_title -->
-            <div>
-                <div class="section-title">
-                    Small Title
-                </div>
-                <div class="description">
-                    <?= $watch->getSmallTitle() ?>
-                </div>
-            </div>
+
             <!-- description -->
             <div>
                 <div class="section-title">
-                    Description
-                </div>
-                <div class="description">
-                    <?= $watch->getDescription() ?>
+                    Description:
+                    <span data-field="description" class="description input-to-text">
+                        <?= $watch->getDescription() ?>
+                    </span>
                 </div>
             </div>
+
             <!-- price -->
             <div>
                 <div class="section-title">
-                    Price
-                </div>
-                <div class="description">
-                    <?= $watch->getPrice() ?>
+                    Price:
+                    <span data-field="price" class="description input-to-text">
+                        <?= $watch->getPrice() ?>
+                    </span>
                 </div>
             </div>
+
             <!-- model_number -->
             <div>
                 <div class="section-title">
-                    Model Number
-                </div>
-                <div class="description">
-                    <?= $watch->getModelNumber() ?>
+                    Model Number:
+                    <span data-field="model_number" class="description input-to-text">
+                        <?= $watch->getModelNumber() ?>
+                    </span>
                 </div>
             </div>
+
             <!-- model_case -->
             <div>
                 <div class="section-title">
-                    Model Case
-                </div>
-                <div class="description">
-                    <?= $watch->getModelCase() ?>
+                    Model Case:
+                    <span data-field="model_case" class="description input-to-text">
+                        <?= $watch->getModelCase() ?>
+                    </span>
                 </div>
             </div>
+
             <!-- water_resistance -->
             <div>
                 <div class="section-title">
-                    Water Resistance
-                </div>
-                <div class="description">
-                    <?= $watch->getWaterResistance() ?>
+                    Water Resistance:
+                    <span data-field="water_resistance" class="description input-to-text">
+                        <?= $watch->getWaterResistance() ?>
+                    </span>
                 </div>
             </div>
+
             <!-- movement -->
             <div>
                 <div class="section-title">
-                    Movement
-                </div>
-                <div class="description">
-                    <?= $watch->getMovement() ?>
+                    Movement:
+                    <span data-field="movement" class="description input-to-text">
+                        <?= $watch->getMovement() ?>
+                    </span>
                 </div>
             </div>
+
             <!-- caliber -->
             <div>
                 <div class="section-title">
-                    Caliber
-                </div>
-                <div class="description">
-                    <?= $watch->getCaliber() ?>
+                    Caliber:
+                    <span data-field="caliber" class="description input-to-text">
+                        <?= $watch->getCaliber() ?>
+                    </span>
                 </div>
             </div>
+
             <!-- power_reserve -->
             <div>
                 <div class="section-title">
-                    Power Reserve
-                </div>
-                <div class="description">
-                    <?= $watch->getPowerReserve() ?>
+                    Power Reserve:
+                    <span data-field="power_reserve" class="description input-to-text">
+                        <?= $watch->getPowerReserve() ?>
+                    </span>
                 </div>
             </div>
+
             <!-- bracelet -->
             <div>
                 <div class="section-title">
-                    Bracelet
-                </div>
-                <div class="description">
-                    <?= $watch->getBracelet() ?>
+                    Bracelet:
+                    <span data-field="bracelet" class="description input-to-text">
+                        <?= $watch->getBracelet() ?>
+                    </span>
                 </div>
             </div>
+
             <!-- dial -->
             <div>
                 <div class="section-title">
-                    Dial
-                </div>
-                <div class="description">
-                    <?= $watch->getDial() ?>
+                    Dial:
+                    <span data-field="dial" class="description input-to-text">
+                        <?= $watch->getDial() ?>
+                    </span>
                 </div>
             </div>
 
@@ -162,7 +168,7 @@
 
         <!-- Image Part :: Start -->
         <div class="product-image">
-            <img src="/views/assets/images/<?= $watch->getModelNumber() ?>.png" alt="">
+            <img src="/views/assets/images/<?= $watch->getModelNumber() ?>.png" alt="<?= $watch->getModelNumber() ?>">
         </div>
         <!-- Image Part :: End -->
     </section>

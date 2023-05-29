@@ -7,16 +7,21 @@ use App\Exceptions\PageNotFoundException;
 class View
 {
 
-    public function __construct(private string $view, private array $parameters = [])
+    private $view;
+    private $parameters;
+
+    public function __construct($view, $parameters = [])
     {
+        $this->view = $view;
+        $this->parameters = $parameters;
     }
 
-    public static function make(string $view, array $parameters = []): static
+    public static function make($view,  $parameters = [])
     {
         return new static($view, $parameters);
     }
 
-    public function render(): string
+    public function render()
     {
         $viewPath = VIEW_PATH . '/' . $this->view . ".php";
 

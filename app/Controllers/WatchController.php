@@ -23,7 +23,7 @@ class WatchController
         ])->render();
     }
 
-    public function show(array $parameters)
+    public function show($parameters)
     {
         $watch = Watch::find($parameters['id']);
 
@@ -38,7 +38,7 @@ class WatchController
         ])->render();
     }
 
-    public function filter(array $parameters)
+    public function filter($parameters)
     {
         $id = $parameters['id'];
 
@@ -59,11 +59,17 @@ class WatchController
     }
 
     // API
-    public function editLargeTitle()
+    public function edit()
     {
-        if (Watch::editLargeTitle($_POST['watch_id'], $_POST['large_title'])) {
-            return "Watch was updated successfully";
+        if (Watch::edit($_POST['watch_id'], $_POST['fieldName'], $_POST['fieldVal'])) {
+            return json_encode([
+                "status" => "success",
+                "fieldVal" => $_POST['fieldVal']
+            ]);
         };
-        return "Failed to update the watch";
+        return json_encode([
+            "status" => "failed",
+            "fieldVal" => $_POST['fieldVal']
+        ]);
     }
 }

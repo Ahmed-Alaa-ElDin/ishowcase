@@ -18,6 +18,6 @@ use App\App;
         "dbName" => "ishowcase",
         "dbHost" => "localhost",
         "dbUser" => "root",
-        "dbPassword" => ""
+        "dbPassword" => "Ahme@1234"
     ]
 ))->run();
